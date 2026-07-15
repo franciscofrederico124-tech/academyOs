@@ -1,0 +1,180 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: rgb(220, 239, 255);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    gap: 20px;
+}
+
+.headerText h1 {
+    font-size: 1.8rem;
+    color: darkblue;
+    margin: 0 0 4px 0;
+}
+
+.headerText p {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 139, 0.7);
+    margin: 0;
+}
+
+.searchBar {
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.searchBar i {
+    color: rgba(0, 0, 139, 0.5);
+    margin-right: 12px;
+    font-size: 1rem;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #1e293b;
+    background: transparent;
+}
+
+.searchBar input::placeholder {
+    color: #94a3b8;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 139, 0.05);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.cardIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: rgb(220, 239, 255);
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.badge {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.cardContent h2 {
+    font-size: 1.3rem;
+    color: darkblue;
+    margin: 0 0 8px 0;
+}
+
+.cardContent p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.actionBtn {
+    background: transparent;
+    color: darkblue;
+    border: 1px solid rgba(0, 0, 139, 0.2);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.actionBtn:hover {
+    background: rgba(0, 0, 139, 0.05);
+    border-color: darkblue;
+}
+
+.noResults {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 0;
+    color: rgba(0, 0, 139, 0.5);
+}
+
+.noResults i {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .searchBar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        padding: 16px;
+        padding-bottom: 86px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

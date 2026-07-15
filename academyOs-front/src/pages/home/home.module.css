@@ -1,0 +1,174 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: rgb(220, 239, 255);
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    color: darkblue;
+    margin: 0 0 4px 0;
+}
+
+.header p {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 139, 0.7);
+    margin: 0;
+}
+
+.kpiGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cardIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.cardData h3 {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 139, 0.6);
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cardData h2 {
+    font-size: 1.5rem;
+    color: darkblue;
+    margin: 0 0 2px 0;
+}
+
+.cardData span {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.positive { 
+    color: #16a34a; 
+}
+
+.negative { 
+    color: #dc2626; 
+}
+
+.neutral {
+    color: #64748b;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.panel {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.panel h2 {
+    font-size: 1.1rem;
+    color: darkblue;
+    margin: 0 0 16px 0;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 139, 0.08);
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.btn {
+    background: rgb(220, 239, 255);
+    color: darkblue;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 139, 0.15);
+}
+
+.alertItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.alertItem i {
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.alertItem div {
+    display: flex;
+    flex-direction: column;
+}
+
+.alertItem strong {
+    font-size: 0.9rem;
+    color: darkblue;
+}
+
+.alertItem p {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+@media (max-width: 620px) {
+    .container {
+        padding: 16px;
+        padding-bottom: 86px;
+    }
+
+    .kpiGrid,
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+}
